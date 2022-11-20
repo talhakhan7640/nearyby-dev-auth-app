@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 // User Routes
-app.use("/users", UserRouter);
+app.use("/", UserRouter);
 
 // free endpoint
 app.get("/free-endpoint", (request, response) => {
