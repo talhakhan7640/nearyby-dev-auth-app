@@ -13,8 +13,12 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
+app.get("/", (request, response) => {
+ response.send("You are trying to access backend of nearby developer!!") 
+})
+
 // User Routes
-app.use("/", UserRouter);
+app.use("/users", UserRouter);
 
 // free endpoint
 app.get("/free-endpoint", (request, response) => {
